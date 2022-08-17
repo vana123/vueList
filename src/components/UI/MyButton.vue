@@ -13,5 +13,6 @@ export default {
     padding: 10px;
     border-radius: 15px;
     border: 3px solid teal;
+    cursor: pointer;
 }
 </style>

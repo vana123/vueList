@@ -22,6 +22,7 @@ export default {
 <style scoped>
 .post__item {
     padding: 10px;
+    border-radius: 15px;
     border: 2px solid teal;
     margin-top: 10px;
     display: flex;
