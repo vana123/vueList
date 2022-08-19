@@ -5,6 +5,7 @@
             <div><strong>Discription:</strong>{{ post.body }}</div>
         </div>
         <div class="post__btns">
+            <my-button class="post__delete" @click="$router.push(`/posts/${post.id}`)">open</my-button>
             <my-button class="post__delete" @click="$emit('remuve', post)">delete</my-button>
         </div>
     </div>

@@ -7,6 +7,7 @@
                 type="text"
                 placeholder="Title"
                 v-model="post.title"
+                v-focus
             />
             <my-input 
                 class="input"

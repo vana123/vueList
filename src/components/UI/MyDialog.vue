@@ -6,17 +6,11 @@
     </div>
 </template>
 <script>
+import toggleMixin from '@/mixins/toggleMixin';
+
 export default {
+    mixins: [toggleMixin],
     name: 'my-dialog',
-    props: {
-        show: Boolean
-    },
-    methods: {
-        hiden() {
-            this.$emit('update:show', false)
-            console.log("")
-        }
-    }
 }
 </script>
 <style>

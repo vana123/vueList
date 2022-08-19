@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1>Page whis posts</h1>
-        <my-input v-model="searchQuery"></my-input>
+        <my-input v-model="searchQuery" v-focus></my-input>
 
         <div class="Posts__buttons">
             <my-button class="button" @click="showDialog">Add posts</my-button>
@@ -10,7 +10,7 @@
         </div>
 
         <post-list :posts="sortedAndSearchedPosts" @remuve="remuvePost" v-if="!isLoading" />
-        <div ref="observer" class="observer"></div>
+        <div v-intersection="LoadMorePosts" class="observer"></div>
         <!-- <div class="pagination">
             <div v-for="pageNumber in totalPages" class="pagination__item" @click="changePage(pageNumber)"
                 :class="{ 'pagination__item_active': pageNumber == this.page }" :key="pageNumber">
@@ -123,20 +123,7 @@ export default {
     },
     mounted() {
         this.fetchPosts();
-        console.log(this.$refs.observer)
-        const options = {
-            rootMargin: '0px',
-            threshold: 1.0
-        }
-        const callback = (entries, observer) => {
-            if (entries[0].isIntersecting && this.page < this.totalPages) {
-                console.log('intesection')
-                this.LoadMorePosts()
-            }
-            /* Content excerpted, show below */
-        };
-        const observer = new IntersectionObserver(callback, options);
-        observer.observe(this.$refs.observer);
+
     },
 }
 </script> 

@@ -1,8 +1,10 @@
 <template lang="">
     <div class="navbar">
-        <my-button @click="$router.push('./')" class="navbar__btn">Home</my-button>
-        <my-button @click="$router.push('./posts')" class="navbar__btn">Pages</my-button>
-        <my-button @click="$router.push('./about')" class="navbar__btn">About it</my-button>
+        <my-button @click="$router.push('/')" class="navbar__btn">Home</my-button>
+        <my-button @click="$router.push('/posts')" class="navbar__btn">Pages</my-button>
+        <my-button @click="$router.push('/store')" class="navbar__btn">Store</my-button>
+        <my-button @click="$router.push('/about')" class="navbar__btn">About it</my-button>
+        <my-button @click="$router.push('/composition')" class="navbar__btn">composition</my-button>
         <!-- <router-link to="/" >Home</router-link>
         <router-link to="/posts" >Posts</router-link>
         <router-link to="/about" >About</router-link> -->
